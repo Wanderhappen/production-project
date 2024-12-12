@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"outDir": "./dist/", // куда производится сборка (в нашем случае не важна, т.к. собираем с помощью webpack)
+		"noImplicitAny": true, // обязательное указание типа переменной
+		"module": "ESNext", // тип модуля или es6 (устар)
+		"target": "es5", // в какую спецификацию компилируем
+		"jsx": "react-jsx", // включаем jsx реактовский
+		"allowJs": true, //обработка не только ts файлов, но и ts
+		"moduleResolution": "node", // 99% node, чтобы обрабатывать не только TS файлы, но и JS
+//		"baseUrl": "./src",
+		"esModuleInterop": true, // позволяет работать с пакетами, которые используют common js (reqire(), как с обычными пакетами с помощью import/export
+		"allowSyntheticDefaultImports": true // включаем дефолтный импорт
+	},
+	"ts-node": { // чтобы все работало
+		"compilerOptions": {
+			"module": "CommonJS"
+		}
+	}
+}
